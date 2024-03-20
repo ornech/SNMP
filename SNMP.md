@@ -6,10 +6,12 @@ sudo apt update
 sudo apt-get install snmpd snmp
 ```
 
-Faire en soirte qu'il soit l'écoute 
+Faire en sorte que le daemon snmpd soit à l'écoute sur l'adresse public:
+``` shell
 sudo nano /etc/snmp/snmpd.conf
+```
 
-Recherchez la ligne agentAddress `udp:127.0.0.1:161` et remplacé là par:
+Recherchez la ligne `agentAddress udp:127.0.0.1:161` et remplacez là par:
 ``` shell
 agentAddress udp:0.0.0.0:161
 ```
@@ -21,7 +23,7 @@ Vérifiez les ports et les service à l'écoute :
 ``` shell
 sudo netstat -tulpn
 ```
-Vous devez avoir une ligne qui indique que daemon snmpd est a lécoute sur le port 161 de l'adresse 0.0.0.0
+Vous devez avoir une ligne qui indique que daemon snmpd est maintenant a l'écoute sur le port 161 de l'adresse 0.0.0.0
 ``` shell
 udp        0      0 0.0.0.0:161             0.0.0.0:*                           3269/snmpd
 ```
