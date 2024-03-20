@@ -5,11 +5,9 @@ sudo apt update
 sudo apt-get install snmpd
 ```
 
-## Installation des MIBS supplémentaire
-
 ## Configuration "miniale" de /etc/snmp/snmp.conf
 Au minimum votre fichier snmp.conf devra contenir:
- -`SNMPDRUN=yes` Pour démarrer le service SNMP
+ - `SNMPDRUN=yes` Pour démarrer le service SNMP
  - `rocommunity public` La communauté SNMP en lecture seule. Rapeller vous la caumunauté agit comme mot de passe 
  - `syslocation Mon_Serveur` Emplacement système (syslocation) :
  - `syscontact admin@mondomaine.lab` Un mail d'adminsitrateur
@@ -18,8 +16,10 @@ Testez cette configuration
 ``` shell
 sudo systemctl restart snmpd
 ```
+# Amélioration de la configuration
+## Installation des MIBS supplémentaire
 
-## Amélioration du fichier /etc/snmp/snmp.conf
+## Ajout de fonctionnalité du fichier /etc/snmp/snmp.conf
 
 Nous devons configurer ces options:
  - export MIBDIRS= définit le répertoire où sont stocké les MIBs
