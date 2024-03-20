@@ -1,4 +1,31 @@
 # Zabbix et SNMP
+# Configuration du manager
+Installer les paquets snmp et snmpd
+``` shell
+sudo apt update
+sudo apt-get install snmpd snmp
+```
+
+Faire en soirte qu'il soit l'écoute 
+sudo nano /etc/snmp/snmpd.conf
+
+Recherchez la ligne agentAddress `udp:127.0.0.1:161` et remplacé là par:
+``` shell
+agentAddress udp:0.0.0.0:161
+```
+Redémarrez le service SNMP
+``` shell
+sudo systemctl restart snmpd
+```
+Vérifiez les ports et les service à l'écoute :
+``` shell
+sudo netstat -tulpn
+```
+Vous devez avoir une ligne qui indique que daemon snmpd est a lécoute sur le port 161 de l'adresse 0.0.0.0
+``` shell
+udp        0      0 0.0.0.0:161             0.0.0.0:*                           3269/snmpd
+```
+
 ## Installation le paquet client SNMP
 ``` shell
 sudo apt update
