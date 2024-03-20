@@ -27,8 +27,11 @@ Vous devez avoir une ligne qui indique que daemon snmpd est maintenant a l'écou
 ``` shell
 udp        0      0 0.0.0.0:161             0.0.0.0:*                           3269/snmpd
 ```
+# Coté agent
+https://www.zabbix.com/documentation/6.4/fr/manual/config/items/itemtypes/snmp?hl=SNMP
 
 ## Installation le paquet client SNMP
+
 ``` shell
 sudo apt update
 sudo apt-get install snmpd
