@@ -18,6 +18,21 @@ Recherchez la ligne `agentAddress udp:127.0.0.1:161` et remplacez par:
 agentAddress udp:161,udp6:[::1]:161
 ```
 
+https://www.zabbix.com/documentation/6.4/fr/manual/config/items/itemtypes/snmp?hl=SNMP
+
+## Configuration "miniale" de /etc/snmp/snmp.conf
+Au minimum votre fichier snmp.conf devra contenir:
+ - `agentAddress udp:161,udp6:[::1]:161` 
+ - `syslocation Mon_Serveur` Emplacement système (syslocation) :
+ - `syscontact admin@mondomaine.lab` Un mail d'adminsitrateur
+ - `rocommunity  public default` 
+
+
+
+Testez cette configuration
+``` shell
+sudo systemctl restart snmpd
+```
 Redémarrez le service SNMPD et vérifiez son status
 ``` shell
 sudo systemctl restart snmpd
@@ -32,20 +47,6 @@ Vous devevriez voir ces lignes. Indique que daemon snmpd est maintenant a l'éco
 ``` shell
 udp        0      0 0.0.0.0:161             0.0.0.0:*                           123863/snmpd        
 udp6       0      0 ::1:161                 :::*                                123863/snmpd  
-```
-# Coté agent
-https://www.zabbix.com/documentation/6.4/fr/manual/config/items/itemtypes/snmp?hl=SNMP
-
-## Configuration "miniale" de /etc/snmp/snmp.conf
-Au minimum votre fichier snmp.conf devra contenir:
- - `agentAddress udp:161,udp6:[::1]:161` 
- - `syslocation Mon_Serveur` Emplacement système (syslocation) :
- - `syscontact admin@mondomaine.lab` Un mail d'adminsitrateur
- - `rocommunity  public default` 
-
-Testez cette configuration
-``` shell
-sudo systemctl restart snmpd
 ```
 
 
