@@ -5,7 +5,7 @@ Installer les paquets snmp et snmpd:
 sudo apt update
 sudo apt-get install snmpd snmp
 ```
-Fichier snmp.conf -> confiuration des MIBS à utiliser  
+Fichier snmp.conf -> Configuration des MIBS à utiliser  
 Fichier snmpd.conf -> Configuration du démon snmpd
 
 
