@@ -1,11 +1,11 @@
 Outils SNMP:
  - snmp-bridge-mib : Ceci est une MIB (Management Information Base) spécifique pour les ponts réseau (bridges). Elle contient des informations sur les ponts réseau, telles que les adresses MAC, les statistiques de trafic, etc.
- - snmpconf : C'est un outil qui permet de configurer le démon SNMP (snmpd) en générant un fichier de configuration snmpd.conf.
- - snmpget : Cet outil est utilisé pour envoyer une requête SNMP de type "GET" à un agent SNMP pour récupérer la valeur d'une variable MIB spécifique.
- - snmpping : Il s'agit d'un outil qui envoie des requêtes SNMP de type "PING" à un périphérique SNMP capable de répondre à ces requêtes. Cela permet de vérifier la connectivité et la disponibilité du périphérique.
- - snmptable : Cet outil récupère et affiche une table SNMP, ce qui est utile pour afficher des données tabulaires structurées telles que les interfaces réseau, les adresses IP, etc.
- - snmptrap : C'est un outil pour envoyer des notifications SNMP (traps) à un gestionnaire SNMP pour informer des événements tels que les pannes, les erreurs, etc.
- - snmpbulkget : Cet outil permet de récupérer un grand volume de données SNMP en une seule requête, ce qui est plus efficace pour récupérer de grandes quantités de données.
- - snmpd : Il s'agit du démon SNMP, qui fonctionne sur les périphériques réseau pour permettre la supervision et la gestion via le protocole SNMP.
- - snmptranslate : Cet outil est utilisé pour traduire les OID (Object Identifiers) SNMP en noms symboliques et vice versa, facilitant ainsi la compréhension des informations de gestion.
- - snmpwalk : C'est un outil qui parcourt récursivement l'arborescence d'OID d'un agent SNMP pour récupérer et afficher les valeurs de toutes les variables MIB accessibles.
+ - snmpconf : Outil qui permet de configuration du démon SNMP (snmpd) -> /etc/snmp/snmpd.conf.
+ - snmpget : Envoie une requête de type "GET" à un agent SNMP pour récupérer la valeur d'une variable MIB spécifique.
+ - snmpping : Envoie une requête de type "PING" à un périphérique SNMP capable de répondre à ces requêtes. Cela permet de vérifier la connectivité et la disponibilité du périphérique.
+ - snmptable :Affiche une table SNMP, ce qui est utile pour afficher des données tabulaires structurées telles que les interfaces réseau, les adresses IP, etc.
+ - snmptrap : Envoie des notifications SNMP (traps) à un gestionnaire SNMP pour informer des événements tels que les pannes, les erreurs, etc.
+ - snmpbulkget :Récupére un grand volume de données SNMP en une seule requête.
+ - snmpd : Il s'agit du démon SNMP.
+ - snmptranslate : Traduire les OID (Object Identifiers) SNMP en noms symboliques et vice versa, facilite la compréhension des informations.
+ - snmpwalk : PArcours récursivement l'arborescence des OID d'un agent SNMP pour récupérer et afficher les valeurs de toutes les valeurs accessibles.
