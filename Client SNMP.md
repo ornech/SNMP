@@ -15,14 +15,12 @@ Au minimum votre fichier snmp.conf devra contenir:
  - `agentAddress udp:161,udp6:[::1]:161` 
  - `syslocation Mon_Serveur` Emplacement système (syslocation) :
  - `syscontact admin@mondomaine.lab` Un mail d'adminsitrateur
- - `rocommunity  public default` 
-
-
-Faire en sorte que le daemon snmpd soit à l'écoute sur le réseau:
+ - `rocommunity  public default`
+   
+Faite les modifications nécessaires  
 ``` shell
 sudo nano /etc/snmp/snmpd.conf
 ```
-Faite les modification nécessaires  
 
 Redémarrez le service SNMPD et vérifiez son status
 ``` shell
@@ -30,11 +28,11 @@ sudo systemctl restart snmpd
 sudo systemctl status snmpd
 ```
 
-Vérifiez les ports et les service à l'écoute :
+Vérifiez que le port 161 soit à l'écoute :
 ``` shell
 sudo netstat -tulpn
 ```
-Vous devevriez voir ces lignes. Indique que daemon snmpd est maintenant a l'écoute sur le port 161 sur les réseaux IPv4 et IPv6;
+Vous devriez voir ces lignes. Indique que daemon snmpd est maintenant a l'écoute sur le port 161 sur les réseaux IPv4 et IPv6;
 ``` shell
 udp        0      0 0.0.0.0:161             0.0.0.0:*                           123863/snmpd        
 udp6       0      0 ::1:161                 :::*                                123863/snmpd  
