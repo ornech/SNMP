@@ -8,15 +8,6 @@ sudo apt-get install snmpd snmp
 Fichier snmp.conf -> confiuration des MIBS à utiliser
 Fichier snmpd.conf -> Configuration du démon snmpd
 
-Faire en sorte que le daemon snmpd soit à l'écoute sur le réseau:
-``` shell
-sudo nano /etc/snmp/snmpd.conf
-```
-
-Recherchez la ligne `agentAddress udp:127.0.0.1:161` et remplacez par:
-``` shell
-agentAddress udp:161,udp6:[::1]:161
-```
 
 https://www.zabbix.com/documentation/6.4/fr/manual/config/items/itemtypes/snmp?hl=SNMP
 
@@ -28,11 +19,12 @@ Au minimum votre fichier snmp.conf devra contenir:
  - `rocommunity  public default` 
 
 
-
-Testez cette configuration
+Faire en sorte que le daemon snmpd soit à l'écoute sur le réseau:
 ``` shell
-sudo systemctl restart snmpd
+sudo nano /etc/snmp/snmpd.conf
 ```
+Faite les modification nécessaires  
+
 Redémarrez le service SNMPD et vérifiez son status
 ``` shell
 sudo systemctl restart snmpd
