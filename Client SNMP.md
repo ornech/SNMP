@@ -61,3 +61,9 @@ snmpstatus -c public <IP DU CLIENT>
 
 
 ## Créer un élément (item)
+ Je m'excuse pour la confusion. Pour créer un avertissement en Markdown sur GitHub, vous pouvez utiliser une combinaison de caractères spéciaux pour styliser le texte. Voici un exemple de code pour créer un avertissement :
+
+markdown
+
+> :warning: L'interrogation d'un client (un GET) passe toujours par la transmission d'un OID. Donc vous devez avant tout trouver l'IOD correspondant à ce que vous souhaitez monitorer.
+ 
