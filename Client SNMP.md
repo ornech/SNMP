@@ -1,4 +1,3 @@
-# Client SNMP Zabbix
 # Configuration du client
 Installer les paquets snmp et snmpd:
 ``` shell
