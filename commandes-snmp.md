@@ -7,5 +7,12 @@ Outils SNMP:
  - snmptrap : Envoie des notifications SNMP (traps) à un gestionnaire SNMP pour informer des événements tels que les pannes, les erreurs, etc.
  - snmpbulkget :Récupére un grand volume de données SNMP en une seule requête.
  - snmpd : Il s'agit du démon SNMP.
+ - snmpstatus:
+``` sql  
+user@zabbix:/etc/snmp$ snmpstatus -v 2c -c public 192.168.1.82 
+```
  - snmptranslate : Traduire les OID (Object Identifiers) SNMP en noms symboliques et vice versa, facilite la compréhension des informations.
- - snmpwalk : PArcours récursivement l'arborescence des OID d'un agent SNMP pour récupérer et afficher les valeurs de toutes les valeurs accessibles.
+ - snmpwalk : Parcours la MIB d'un agent SNMP et afficher les valeurs de toutes les valeurs accessibles.
+``` sql
+snmpwalk -v 2c -c public 192.168.1.82
+```
