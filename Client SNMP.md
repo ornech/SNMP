@@ -6,11 +6,14 @@ sudo apt install snmpd snmp
 ```
 Fichier snmp.conf -> Configuration des MIBS à utiliser  
 Fichier snmpd.conf -> Configuration du démon snmpd
+Doc: https://www.zabbix.com/documentation/6.4/fr/manual/config/items/itemtypes/snmp?hl=SNMP
 
-
-https://www.zabbix.com/documentation/6.4/fr/manual/config/items/itemtypes/snmp?hl=SNMP
+## Configuraiton du fichier /etc/snmp.conf
+Ce fichier permet de déterminer quels fichiers MIBS seront pris en
 
 ## Configuration "miniale" de /etc/snmp/snmp.conf
+Ce fichier dédié à la configuration du démon snmpd  
+
 Au minimum votre fichier snmp.conf devra contenir:
  - `agentAddress udp:161,udp6:[::1]:161` 
  - `syslocation Mon_Serveur` Emplacement système (syslocation) :
