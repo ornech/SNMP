@@ -40,5 +40,21 @@ Vous devevriez voir ces lignes. Indique que daemon snmpd est maintenant a l'éco
 udp        0      0 0.0.0.0:161             0.0.0.0:*                           123863/snmpd        
 udp6       0      0 ::1:161                 :::*                                123863/snmpd  
 ```
+Affichez la MIB du client  
+``` shell
+snmpwalk -c public -v 2c localhost
+```
 
+## Testez la communication entre votre agent et le manager
+Depuis le client  
+``` shell
+snmpstatus -c public <IP DU MANAGER>
+```
 
+Depuis le manager  
+``` shell
+snmpstatus -c public <IP DU CLIENT>
+```
+# Depuis l'interface Zabbix
+## Créez un hote
+## Créer un élément (item)
