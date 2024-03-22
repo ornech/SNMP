@@ -62,5 +62,5 @@ snmpstatus -c public <IP DU CLIENT>
 
 ## Créer un élément (item)
 
-> :warning: L'interrogation d'un client (un GET) passe toujours par la transmission d'un OID. Donc vous devez avant tout trouver l'IOD correspondant à ce que vous souhaitez monitorer. C'est là que le ennuis commence ...
+> :warning: L'interrogation d'un client (un GET) passe toujours par la transmission d'un OID. Vous devez donc trouver l'IOD correspondant à ce que vous souhaitez monitorer. C'est là que les ennuis commencent ...
  
