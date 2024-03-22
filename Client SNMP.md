@@ -54,4 +54,10 @@ snmpstatus -c public <IP DU CLIENT>
 ```
 # Depuis l'interface Zabbix
 ## Créez un hote
+ 1. Depuis le menu de gauche, séletionnez "Surveillance" -> "Hôte"
+ 2. Cliquez sur le bouton "Créer un hôte" (complètement en haut à droite) ![image](https://github.com/ornech/Supervision-zabbix/assets/101867500/35cb1694-f611-429c-88a4-82ba86297e26)
+ 3. Renseignez les champs "Nom de l'hôte", "Groupes"
+ 4. Ajouter une interface SNMP ![image](https://github.com/ornech/Supervision-zabbix/assets/101867500/70070581-f216-40b4-b7c6-0ee605a56ebb)
+
+
 ## Créer un élément (item)
