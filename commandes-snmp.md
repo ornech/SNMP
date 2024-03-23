@@ -1,4 +1,8 @@
 # Outils SNMP
+**snmpstatus**:
+``` bash  
+snmpstatus -v 2c -c public 192.168.1.82 
+```
 **snmpget** : Envoie une requête de type "GET" à un agent SNMP pour récupérer la valeur d'un OID.
 ``` bash  
 snmpget -c public -v 2c localhost .1.3.6.1.2.1.1.1
@@ -25,9 +29,6 @@ perl /usr/bin/snmp-bridge-mib <NOM DU PONT>
 
 **snmptrap** : Envoie des notifications SNMP (traps) à un gestionnaire SNMP pour informer des événements tels que les pannes, les erreurs, etc.  
 **snmpbulkget** :Récupére un grand volume de données SNMP en une seule requête.  
-**snmpstatus**:
-``` bash  
-snmpstatus -v 2c -c public 192.168.1.82 
-```
+
 
 
