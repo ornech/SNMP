@@ -1,5 +1,5 @@
 # Outils SNMP
-**snmpget** : Envoie une requête de type "GET" à un agent SNMP pour récupérer la valeur MIB spécifique.
+**snmpget** : Envoie une requête de type "GET" à un agent SNMP pour récupérer la valeur d'un OID.
 ``` bash  
 snmpget -c public -v 2c localhost .1.3.6.1.2.1.1.1
 ```
@@ -7,7 +7,7 @@ snmpget -c public -v 2c localhost .1.3.6.1.2.1.1.1
 ``` bash
 snmpwalk -v 2c -c public 192.168.1.82
 ```
- **snmptable** :Certain OID font référence à des données stockées sous forme de tableau comme que les interfaces réseau, les adresses IP, etc.
+ **snmptable** :Certain OID font référence à des données stockées sous forme de tableau comme les interfaces réseau, les points de montage, etc.
 ``` bash  
 snmptable -c public -v 2c localhost  .1.3.6.1.2.1.2.2
 ```
