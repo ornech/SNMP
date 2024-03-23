@@ -1,5 +1,5 @@
 # Outils SNMP
-**snmpstatus**:
+**snmpstatus**: Tente d'établir une connexion avec un agent sur le port UDP:161 de l'hôte spécifié.
 ``` bash  
 snmpstatus -v 2c -c public 192.168.1.82 
 ```
