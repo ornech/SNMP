@@ -13,8 +13,11 @@ snmptable -c public -v 2c localhost  .1.3.6.1.2.1.2.2
 ```
 **snmptranslate** : Traduire les OID (Object Identifiers) SNMP en noms symboliques et vice versa  
 
+**snmp-bridge-mib** : Collecte des informations sur un pont réseaux Linux et exporte ces données afin qu'elles puissent être interrogées à distance via SNMP. Nécessite l'utisation de l'agentx.
+``` bash  
+perl /usr/bin/snmp-bridge-mib <NOM DU PONT>
+```
 
-**snmp-bridge-mib** : Ceci est une MIB (Management Information Base) spécifique pour les ponts réseau (bridges). Elle contient des informations sur les ponts réseau, telles que les adresses MAC, les statistiques de trafic, etc.  
 **snmpconf** : Outil qui permet de configuration du démon SNMP (snmpd) -> /etc/snmp/snmpd.conf.  
 
 **snmpping** : Envoie une requête de type "PING" à un périphérique SNMP capable de répondre à ces requêtes. Cela permet de vérifier la connectivité et la disponibilité du périphérique.  
