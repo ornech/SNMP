@@ -1,0 +1,14 @@
+# Depuis l'interface Zabbix
+## Créez un hote
+ 1. Depuis le menu de gauche, séletionnez "Surveillance" -> "Hôte"
+ 2. Cliquez sur le bouton "Créer un hôte" (complètement en haut à droite) ![image](https://github.com/ornech/Supervision-zabbix/assets/101867500/35cb1694-f611-429c-88a4-82ba86297e26)
+ 3. Renseignez les champs "Nom de l'hôte", "Groupes"
+ 4. Ajouter une interface SNMP (l'IP étant celle de votre client SNMP) ![image](https://github.com/ornech/Supervision-zabbix/assets/101867500/70070581-f216-40b4-b7c6-0ee605a56ebb)
+
+
+## Créer un élément (item)
+
+Doc: https://www.zabbix.com/documentation/6.4/fr/manual/config/items/itemtypes/snmp?hl=SNMP
+
+> :warning: L'interrogation d'un client (un GET) passe toujours par la transmission d'un OID. Vous devez donc trouver l'IOD correspondant à ce que vous souhaitez monitorer. C'est là que les ennuis commencent ...
+ 
